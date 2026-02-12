@@ -3,6 +3,7 @@
   "outputDirectory": ".",
   "routes": [
     { "src": "/clubewhats/?", "dest": "/clubewhats.html" },
+    { "src": "/down1/?", "dest": "/down1.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
