@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta Exclusiva - Clube Café da Manhã da Nutri</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff9f3;
+      color: #333;
+      text-align: center;
+    }
+    .top {
+      background-color: #e7dac7;
+      padding: 40px 20px;
+    }
+    .top h1 {
+      font-size: 28px;
+      color: #5e4e37;
+      margin-bottom: 10px;
+    }
+    .top p {
+      font-size: 18px;
+      color: #6f5b43;
+    }
+    .badge {
+      background-color: #f97316;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .video-section {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+    }
+    .video-section video {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+      margin: 0 auto;
+    }
+    #playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    .hidden-section {
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .features, .whatsapp-preview, .cta, .faq {
+      padding: 40px 20px;
+    }
+    .features {
+      background-color: #fff5e7;
+    }
+    .features h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+      color: #5e4e37;
+      line-height: 1.8;
+    }
+    .whatsapp-preview video {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cta h3 {
+      font-size: 22px;
+      color: #5e4e37;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .faq {
+      background-color: #fff;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+    .faq h2 {
+      font-size: 24px;
+      color: #5e4e37;
+      margin-bottom: 20px;
+    }
+    .accordion {
+      background-color: #f3f3f3;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .active, .accordion:hover {
+      background-color: #e2e2e2;
+    }
+    .accordion::after {
+      content: '\25BC';
+      font-size: 13px;
+      float: right;
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+    .accordion.active::after {
+      transform: rotate(180deg);
+    }
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      font-size: 16px;
+      text-align: left;
+      color: #555;
+      border-left: 4px solid #f97316;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background: black;
+      border-radius: 14px;
+    }
+    .video-container {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+    .play-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 14px;
+      z-index: 2;
+    }
+    .play-overlay.hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<div style="background-color: #5d6a55; color: #ffffff; text-align: center; padding: 14px 8px; font-family: 'Inter', sans-serif; border-bottom: 2px solid #e0dcd1;">
+  <p style="margin: 0; font-weight: bold; font-size: 16px;">⚠️ OFERTA ÚNICA</p>
+  <p style="margin: 4px 0 0; font-size: 14px; letter-spacing: 0.4px;">
+    LEVE JUNTO COM <strong>70% DE DESCONTO</strong>!
+  </p>
+</div>
+
+<div class="top">
+  <div class="badge"> ASSINATURA MENSAL</div>
+  <h1>💚 Clube Café da Manhã da Nutri</h1>
+  <p>Receba receitas em vídeo todos os dias direto no WhatsApp.</p>
+  <p>Sua manhã com muito mais sabor, praticidade e saúde.</p>
+</div>
+
+<!-- VIDEO SECTION - YouTube embed no lugar do vídeo autohospedado -->
+<div class="video-wrapper">
+  <div class="video-container" id="ytplayer"></div>
+  <div class="play-overlay" onclick="ativarAudioYT()">
+    ▶ Toque para ouvir
+  </div>
+</div>
+
+<script>
+  let player;
+  let conteudoLiberado = false;
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '100%',
+      width: '100%',
+      videoId: 'LK6ES8VmGow',
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        modestbranding: 1,
+        rel: 0,
+        showinfo: 0,
+        fs: 0,
+        mute: 1,
+        enablejsapi: 1,
+        origin: window.location.origin
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !conteudoLiberado) {
+      setInterval(() => {
+        if (player.getCurrentTime() >= 113) {
+          document.getElementById("afterVSL").style.display = "block";
+          conteudoLiberado = true;
+        }
+      }, 1000);
+    }
+  }
+
+  /* ✅ CORREÇÃO AQUI */
+  function ativarAudioYT() {
+    if(player) {
+      player.seekTo(0);   // Reinicia o vídeo do começo
+      player.unMute();    // Ativa o áudio
+      player.playVideo(); // Reproduz novamente
+      document.querySelector('.play-overlay').classList.add('hidden'); // Some o overlay
+    }
+  }
+
+  // Carrega API YouTube
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
+<!-- CONTEÚDO ESCONDIDO QUE APARECE APÓS 1:53 -->
+<div id="afterVSL" class="hidden-section">
+  <div class="features">
+    <h2>Você vai receber:</h2>
+    <ul>
+      <li>✅ Receitas em vídeos todos os dias no seu WhatsApp</li>
+      <li>✅ Tudo testado e aprovado por Nutricionista</li>
+      <li>✅ Receitas simples, saudáveis e irresistíveis</li>
+      <li>✅ Café da manhã leve, sem repetir, sem dieta maluca</li>
+      <li>✅ Suporte da equipe da Nutri</li>
+    </ul>
+  </div>
+
+  <div class="whatsapp-preview">
+    <video autoplay muted loop playsinline>
+      <source src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/bahbah.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="cta">
+    <h3>Apenas <span class="price">R$19,90 por mês</span></h3>
+    <p>Atualize sua rotina matinal sem esforço.</p>
+    <div style="background-color: #fff3cd; color: #856404; padding: 10px 15px; border-radius: 5px; margin-bottom: 15px; font-weight: bold; text-align: center; font-size: 15px;">
+      ⚠️ Válido apenas nesta página e por tempo limitado. Ao sair, você perde o desconto!
+    </div>
+
+    <!-- BOTÃO LASTLINK -->
+    <script src="https://cdn.lastlink.com/upsell.min.js"></script>
+    <script>
+    var upsellRedirect = "https://receitasdanutri.com.br/up/";
+
+    function setupDenyButtons() {
+        document.querySelectorAll('[id^="denyButton"]').forEach(button => {
+            button.onclick = function() {
+                const currentUrl = new URL(window.location.href);
+                const newUrl = new URL("https://receitasdanutri.com.br/up/");
+
+                currentUrl.searchParams.forEach((value, key) => {
+                    newUrl.searchParams.append(key, value);
+                });
+
+                window.location.href = newUrl.toString();
+            };
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupDenyButtons);
+    } else {
+        setupDenyButtons();
+    }
+    </script>
+    <div style="font-family: DM Sans; display: flex; flex-direction: column; gap: 24px; align-items: center; cursor: pointer;">
+      <div class="button-default button-accept w-full" style="padding: 17px 32px; line-height: 22px; border-radius: 12px; font-weight: 700 !important; background-color: rgb(52, 226, 60); color: rgb(0, 0, 0);" id="llupsell-C9DED2C0E-1">
+        SIM, QUERO RECEITAS EM VÍDEO TODO DIA!
+      </div>
+      <div class="button-default button-deny w-full" style="text-decoration: underline; line-height: 22px; font-size: 16px; font-weight: 700 !important; color: rgb(0, 0, 0);" id="denyButton2fc7deb">
+        Recusar esta oferta
+      </div>
+    </div>
+
+    <div style="height: 80px;"></div>
+
+    <div class="faq">
+      <h2>Dúvidas Frequentes</h2>
+
+      <button class="accordion">Como recebo as receitas?</button>
+      <div class="panel">
+        <p>Você será adicionado a um grupo fechado do WhatsApp onde receberá diariamente uma receita em vídeo.</p>
+      </div>
+
+      <button class="accordion">Posso cancelar quando quiser?</button>
+      <div class="panel">
+        <p>Sim! A assinatura é mensal e pode ser cancelada a qualquer momento com 1 clique.</p>
+      </div>
+
+      <button class="accordion">É só café da manhã?</button>
+      <div class="panel">
+        <p>Sim! São receitas práticas e variadas para o café da manhã, com foco em saúde, leveza e sabor.</p>
+      </div>
+
+      <button class="accordion">Preciso saber cozinhar?</button>
+      <div class="panel">
+        <p>Não! Todas as receitas são simples, com passo a passo em vídeo, pensadas para o dia a dia.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(el => {
+    el.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+
+  function toggleAudio() {
+    const video = document.getElementById('vslVideo');
+    const button = document.getElementById('playButton');
+    video.muted = false;
+    video.play();
+    button.style.display = 'none';
+  }
+
+  // Exibe conteúdo após 1:53 (113 segundos)
+  setTimeout(() => {
+    document.getElementById('afterVSL').style.display = 'block';
+  }, 113000);
+</script>
+
+</body>
+</html>
