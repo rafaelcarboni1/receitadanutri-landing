@@ -4,6 +4,8 @@
   "routes": [
     { "src": "/clubewhats/?", "dest": "/clubewhats.html" },
     { "src": "/down1/?", "dest": "/down1.html" },
+    { "src": "/down2/?", "dest": "/down2.html" },
+    { "src": "/parabensobrigado/?", "dest": "/parabensobrigado.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
