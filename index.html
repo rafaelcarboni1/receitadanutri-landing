@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>café da manhã – receitadanutri.shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* RESET */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e8e0d0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ========================================
+       SEÇÃO 1 – HERO (FUNDO VERDE OLIVA)
+       ======================================== */
+    .bloco-cafe-nutri {
+      max-width: 430px;
+      margin: 0 auto;
+      padding: 32px 18px 28px 18px;
+      background-color: #4b5433;
+      text-align: center;
+    }
+    .titulo-cafe-nutri {
+      margin: 0 0 14px 0;
+      color: #fff;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .subtitulo-cafe-nutri {
+      margin: 0 0 22px 0;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .slider-cafe-nutri {
+      position: relative;
+      width: 100%;
+      max-width: 390px;
+      margin: 0 auto 24px auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .slides-cafe-nutri {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .slides-cafe-nutri img {
+      min-width: 100%;
+      width: 100%;
+      flex: 0 0 100%;
+      display: block;
+      border-radius: 8px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    /* ========================================
+       BOTÃO CTA PULSANTE (GLOBAL)
+       ======================================== */
+    .botao-cafe-nutri {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 10px 32px;
+      border-radius: 999px;
+      background-color: #2cac43;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+      text-align: center;
+      animation: pulse-cafe-nutri 1.3s infinite;
+    }
+    @keyframes pulse-cafe-nutri {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    /* ========================================
+       SEÇÃO 2 – O QUE VOCÊ VAI ENCONTRAR
+       ======================================== */
+    .bloco-encontrar {
+      background: #f9f1db;
+      padding: 40px 20px 32px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .titulo-encontrar {
+      margin: 0 0 22px;
+      color: #4b5433;
+      font-size: 26px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    .titulo-encontrar span { font-weight: 700; }
+    .lista-encontrar {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      color: #4b5433;
+    }
+    .lista-encontrar li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .lista-encontrar .icon svg {
+      width: 24px;
+      height: 24px;
+      fill: #4b5433;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .botao-encontrar {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 10px 32px;
+      border-radius: 999px;
+      background: #2cac43;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      animation: pulse-cafe-nutri 1.3s infinite;
+    }
+
+    /* ========================================
+       SEÇÃO 3 – VEJA O QUE VOCÊ VAI APRENDER
+       ======================================== */
+    .bloco-aprender {
+      background: #4b5433;
+      padding: 40px 20px 50px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .titulo-aprender {
+      color: #fff7e7;
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .titulo-normal { font-weight: 400; }
+    .titulo-bold { font-weight: 700; color: #fff7e7; }
+    .card-aprender {
+      background: #fff7e7;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .card-aprender img { width: 100%; display: block; }
+    .card-info {
+      padding: 18px 10px;
+    }
+    .card-info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #4b5433;
+      margin: 0 0 4px 0;
+    }
+    .card-info p {
+      font-size: 12px;
+      color: #b3b3b3;
+      font-weight: 600;
+      margin: 0;
+    }
+    .mais-opcoes {
+      font-size: 24px;
+      color: #fff7e7;
+      margin: 30px 0 24px;
+      line-height: 1.25;
+    }
+    .mais-bold { font-weight: 700; }
+
+    /* ========================================
+       SEÇÃO 4 – NUTRICIONISTA LARA MENEZES
+       ======================================== */
+    .bloco-nutricionista {
+      background: #2f3125;
+      padding: 0 0 40px 0;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .img-nutri {
+      width: 100%;
+      display: block;
+    }
+    .titulo-nutri {
+      font-size: 24px;
+      line-height: 1.3;
+      margin: 25px 20px 18px;
+      color: #fff7e7;
+    }
+    .texto-nutri {
+      color: #fff7e7;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 22px;
+    }
+
+    /* ========================================
+       SEÇÃO 5 – BÔNUS EXCLUSIVOS
+       ======================================== */
+    .bloco-bonus-container {
+      background: #fff7e7;
+      padding: 35px 20px 40px;
+      text-align: center;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    .titulo-bonus {
+      color: #4b5433;
+      font-size: 22px;
+      line-height: 1.3;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .bonus-normal { font-weight: 400; }
+    .bonus-bold { font-weight: 700; }
+    .card-bonus {
+      background: #4b5433;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+    .card-bonus img {
+      width: 100%;
+      display: block;
+    }
+    .bonus-info {
+      padding: 16px;
+      color: #fff7e7;
+    }
+    .bonus-info h3 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      font-weight: 600;
+    }
+    .bonus-info h4 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+    .risco {
+      color: #faf2e2;
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    .gratis {
+      color: #2cac43;
+      font-weight: 700;
+    }
+
+    /* ========================================
+       SEÇÃO 6 – PARA PESSOAS QUE ENFRENTAM
+       ======================================== */
+    .bloco-enfrentam {
+      background: #4b5433;
+      padding: 40px 22px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .titulo-enfrentam {
+      color: #fff7e7;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .titulo-enfrentam span { font-weight: 700; }
+    .lista-enfrentam {
+      list-style: none;
+      padding: 0;
+    }
+    .lista-enfrentam li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 15px;
+      color: #fff7e7;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .icon-x {
+      margin-right: 10px;
+    }
+    .icon-x svg {
+      width: 20px;
+      height: 20px;
+      fill: #e74c3c;
+    }
+
+    /* ========================================
+       SEÇÃO 7 – VEJA AS VANTAGENS
+       ======================================== */
+    .bloco-vantagens {
+      background: #fff7e7;
+      padding: 40px 24px 32px;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    .titulo-vantagens {
+      color: #4b5433;
+      font-size: 26px;
+      font-weight: 400;
+      margin: 0 0 22px 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .titulo-vantagens span { font-weight: 700; }
+    .lista-vantagens {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
+    .lista-vantagens li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 17px;
+      color: #4b5433;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .icon-check {
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+    .icon-check svg {
+      width: 18px;
+      height: 18px;
+      fill: #4b5433;
+    }
+
+    /* ========================================
+       SEÇÃO 8 – VEJA O QUE DIZ QUEM ADQUIRIU (WHATSAPP)
+       ======================================== */
+    .bloco-whats {
+      background: #4b5433;
+      padding: 40px 24px 40px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .titulo-whats {
+      color: #fff7e7;
+      font-size: 24px;
+      line-height: 1.25;
+      margin: 0 0 20px 0;
+    }
+    .whats-normal { font-weight: 400; }
+    .whats-bold { font-weight: 700; }
+    .carrossel-whats {
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #ddd3c4;
+    }
+    .carrossel-inner {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .carrossel-inner img {
+      min-width: 100%;
+      width: 100%;
+      flex: 0 0 100%;
+      display: block;
+    }
+
+    /* ========================================
+       SEÇÃO 9 – OFERTA / PREÇO
+       ======================================== */
+    .secao-oferta-cafe {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    .faixa-bege {
+      background: #fff7e7;
+      padding: 30px 20px 40px;
+    }
+    .card-produto {
+      background: #4b5433;
+      border-radius: 18px;
+      padding: 30px 20px 25px;
+      text-align: center;
+      color: #fff7e7;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .img-produto {
+      width: 100%;
+      max-width: 260px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .titulo-produto {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .sub-produto {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .preco-riscado {
+      font-size: 20px;
+      text-decoration: line-through;
+      text-decoration-color: red;
+      margin-bottom: 4px;
+    }
+    .preco-novo {
+      font-size: 38px;
+      font-weight: 800;
+      color: #2fd33b;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .preco-avista {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    /* ========================================
+       SEÇÃO 10 – GARANTIA
+       ======================================== */
+    .card-garantia {
+      width: 100%;
+      background: #ffffff;
+      padding: 40px 25px;
+      text-align: center;
+      color: #4b5433;
+      border-radius: 0;
+      margin: 0;
+    }
+    .card-garantia h3 {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .card-garantia p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* ========================================
+       SEÇÃO 11 – COMO IREI RECEBER
+       ======================================== */
+    .bloco-receber {
+      background: #4b5433;
+      padding: 40px 20px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff7e7;
+    }
+    .titulo-receber {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+    .titulo-receber span { font-weight: 700; }
+    .img-dispositivos {
+      width: 100%;
+      max-width: 360px;
+      display: block;
+      margin: 0 auto 25px;
+    }
+    .lista-receber {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 360px;
+      text-align: left;
+    }
+    .lista-receber li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .icon-plus {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .icon-plus svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff7e7;
+    }
+
+    /* ========================================
+       SEÇÃO 12 – FAQ
+       ======================================== */
+    .faq-section {
+      background: #fff7e7;
+      padding: 50px 25px;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    .faq-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 45px;
+      white-space: nowrap;
+    }
+    .faq-title h2 {
+      font-size: 24px;
+      color: #4b5433;
+      font-weight: 600;
+      margin: 0;
+      text-align: center;
+    }
+    .faq-item {
+      border-bottom: 1px solid #4b5433;
+      padding: 18px 0;
+    }
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      color: #4b5433;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "DM Sans", sans-serif;
+    }
+    .faq-question .arrow {
+      font-size: 16px;
+      transition: 0.3s;
+      color: #4b5433;
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #4b5433;
+      line-height: 1.5;
+      transition: max-height 0.35s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    .faq-item.active .arrow {
+      transform: rotate(0deg);
+    }
+
+    /* ========================================
+       RESPONSIVO
+       ======================================== */
+    @media (max-width: 480px) {
+      .bloco-cafe-nutri { padding: 28px 14px 24px 14px; }
+      .titulo-cafe-nutri { font-size: 22px; }
+      .subtitulo-cafe-nutri { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     SEÇÃO 1 – HERO
+     ========================================== -->
+<div class="bloco-cafe-nutri">
+  <h1 class="titulo-cafe-nutri">
+    300 CAFÉS DA MANHÃ <br>DE NUTRI (COM SABOR)
+  </h1>
+  <p class="subtitulo-cafe-nutri">
+    Receitas de baixas calorias criadas pela nutri Lara Menezes, com sabor delicioso de verdade.
+  </p>
+
+  <div class="slider-cafe-nutri" id="slider-cafe-nutri">
+    <div class="slides-cafe-nutri">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/7.webp" alt="Receita 1">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/6.webp" alt="Receita 2">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/5.webp" alt="Receita 3">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/3.webp" alt="Receita 4">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/4.webp" alt="Receita 5">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/2.webp" alt="Receita 6">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/1.webp" alt="Receita 7">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/9.webp" alt="Receita 8">
+    </div>
+  </div>
+
+  <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-cafe-nutri">QUERO AS RECEITAS!</a>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 2 – O QUE VOCÊ VAI ENCONTRAR
+     ========================================== -->
+<div class="bloco-encontrar">
+  <h2 class="titulo-encontrar">
+    O QUE VOCÊ <br><span>VAI ENCONTRAR:</span>
+  </h2>
+
+  <ul class="lista-encontrar">
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/><path d="M13 7h-2v6h2V7zm0 8h-2v2h2v-2z" fill="none"/><circle cx="12" cy="12" r="10" fill="none" stroke="#4b5433" stroke-width="0"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v6h-2V7h2zm0 8v2h-2v-2h2z"/></svg></span>
+      Receitas de até 350 calorias
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Com sabores deliciosos de verdade
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></span>
+      Com proteínas e vitaminas essenciais
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></span>
+      Prontas em 15 minutos
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></span>
+      Com ingredientes comuns
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6v8h3v8h2V2c-2.76 0-5 2.24-5 4zm-5 3H9V2H7v7H5V2H3v7c0 2.21 1.79 4 4 4v9h2v-9c2.21 0 4-1.79 4-4V2h-2v7z"/></svg></span>
+      Use apenas liquidificador e frigideira
+    </li>
+    <li>
+      <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></span>
+      Passo a passo de preparo
+    </li>
+  </ul>
+
+  <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-encontrar">QUERO AS RECEITAS!</a>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 3 – VEJA O QUE VOCÊ VAI APRENDER
+     ========================================== -->
+<div class="bloco-aprender">
+  <h2 class="titulo-aprender">
+    <span class="titulo-normal">VEJA O QUE VOCÊ</span><br>
+    <span class="titulo-bold">VAI APRENDER:</span>
+  </h2>
+
+  <!-- Card 1 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/1-1.webp" alt="Café de Frigideira">
+    <div class="card-info">
+      <h3>CAFÉ DE FRIGIDEIRA<br>COM OVOS E FRIOS</h3>
+      <p>10 MINUTOS / 193 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/2-1.webp" alt="Pizza Rápida">
+    <div class="card-info">
+      <h3>PIZZA RÁPIDA<br>DE FRIGIDEIRA</h3>
+      <p>3 INGREDIENTES / 207 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/3-1.webp" alt="Panqueca Fit">
+    <div class="card-info">
+      <h3>PANQUECA FIT<br>DE BANANA</h3>
+      <p>7 MINUTOS / 193 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/4-1.webp" alt="Omelete de Frios">
+    <div class="card-info">
+      <h3>OMELETE DE FRIOS<br>TOSTADA</h3>
+      <p>9 MINUTOS / 205 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/5-1.webp" alt="Salada de Frutas">
+    <div class="card-info">
+      <h3>SALADA DE FRUTAS<br>DIGESTIVAS (P/ SEMANA)</h3>
+      <p>0 MINUTOS / 112 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/6-1.webp" alt="Pão Cremoso">
+    <div class="card-info">
+      <h3>PÃO CREMOSO<br>GRATINADO</h3>
+      <p>6 MINUTOS / 170 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/7-1.webp" alt="Shakes Detox">
+    <div class="card-info">
+      <h3>SHAKES DETOX<br>SABOROSOS</h3>
+      <p>5 MINUTOS / 120 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/8-1.webp" alt="Bolo de Banana">
+    <div class="card-info">
+      <h3>BOLO DE BANANA<br>DE CANECA</h3>
+      <p>3 INGREDIENTES / 175 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/9.jpg" alt="Sanduiche Proteico">
+    <div class="card-info">
+      <h3>SANDUICHE PROTEICO<br>DE FRIGIDEIRA</h3>
+      <p>10 MINUTOS / 180 CALORIAS</p>
+    </div>
+  </div>
+
+  <!-- Card 10 -->
+  <div class="card-aprender">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/10.jpg" alt="Brownie de Frigideira">
+    <div class="card-info">
+      <h3>BROWNIE DE FRIGIDEIRA<br>(3 INGREDIENTES)</h3>
+      <p>10 MINUTOS / 176 CALORIAS</p>
+    </div>
+  </div>
+
+  <p class="mais-opcoes">
+    <span class="mais-bold">+200 OUTRAS</span><br>
+    OPÇÕES DA NUTRI!
+  </p>
+
+  <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-cafe-nutri">QUERO AS RECEITAS!</a>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 4 – NUTRICIONISTA
+     ========================================== -->
+<div class="bloco-nutricionista">
+  <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/Whisk_dcfe4404778dd7494ef4759721b8bc31dr.jpeg" alt="Nutricionista Lara Menezes" class="img-nutri">
+  <h2 class="titulo-nutri">
+    <span class="titulo-normal">CARDÁPIO FEITO PELA</span><br>
+    <span class="titulo-bold">NUTRICIONISTA LARA MENEZES</span>
+  </h2>
+  <p class="texto-nutri">
+    Lara Menezes, nutricionista especializada em alimentação funcional, criou mais de 300 receitas de cafés da manhã saudáveis, deliciosos de verdade e que ficam prontos em até 15 minutos. Cada receita foi pensada para oferecer todos os nutrientes que seu corpo precisa logo no início do dia, com foco no sabor e na praticidade.
+  </p>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 5 – BÔNUS
+     ========================================== -->
+<div class="bloco-bonus-container">
+  <h2 class="titulo-bonus">
+    <span class="bonus-normal">RECEBA AINDA</span><br>
+    <span class="bonus-bold">+ 3 BÔNUS EXCLUSIVOS:</span>
+  </h2>
+
+  <!-- Bônus 1 -->
+  <div class="card-bonus">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/maxresdefault.webp" alt="200 Sobremesas Zero Açúcar">
+    <div class="bonus-info">
+      <h3>BÔNUS 1:</h3>
+      <h4>200 SOBREMESAS<br>ZERO AÇÚCAR</h4>
+      <p><span class="risco">R$29,00</span> HOJE É <span class="gratis">GRÁTIS!</span></p>
+    </div>
+  </div>
+
+  <!-- Bônus 2 -->
+  <div class="card-bonus">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/maxresdefault-1.webp" alt="30 Marmitas Fit">
+    <div class="bonus-info">
+      <h3>BÔNUS 2:</h3>
+      <h4>30 MARMITAS FIT<br>P/ CONGELAR</h4>
+      <p><span class="risco">R$15,00</span> HOJE É <span class="gratis">GRÁTIS!</span></p>
+    </div>
+  </div>
+
+  <!-- Bônus 3 -->
+  <div class="card-bonus">
+    <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/receita-de-suco-detox.webp" alt="60 Sucos Detox">
+    <div class="bonus-info">
+      <h3>BÔNUS 3:</h3>
+      <h4>60 SUCOS DETOX</h4>
+      <p><span class="risco">R$29,00</span> HOJE É <span class="gratis">GRÁTIS!</span></p>
+    </div>
+  </div>
+
+  <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-cafe-nutri">QUERO AS RECEITAS!</a>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 6 – PARA PESSOAS QUE ENFRENTAM
+     ========================================== -->
+<div class="bloco-enfrentam">
+  <h2 class="titulo-enfrentam">
+    PARA PESSOAS<br><span>QUE ENFRENTAM:</span>
+  </h2>
+
+  <ul class="lista-enfrentam">
+    <li>
+      <span class="icon-x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Falta de opções saudáveis de café da manhã
+    </li>
+    <li>
+      <span class="icon-x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Dificuldade em perder peso e alimentar-se bem
+    </li>
+    <li>
+      <span class="icon-x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Falta de receitas saborosas que nutrem
+    </li>
+    <li>
+      <span class="icon-x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Falta de receitas rápidas para o café da manhã
+    </li>
+    <li>
+      <span class="icon-x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Falta de nutrientes necessários para o dia
+    </li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 7 – VEJA AS VANTAGENS
+     ========================================== -->
+<div class="bloco-vantagens">
+  <h2 class="titulo-vantagens">
+    VEJA AS <span>VANTAGENS</span>
+  </h2>
+
+  <ul class="lista-vantagens">
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Cardápio criado por uma nutricionista
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Mais de 300 opções saudáveis
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Baixíssimas em calorias
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Sabor novo todos os dias sem enjoar
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Feitas em menos de 15 minutos
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Não precisa de utensílios profissionais
+    </li>
+    <li>
+      <span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+      Nutrição completa pra começar o dia
+    </li>
+  </ul>
+
+  <div style="text-align:center;">
+    <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-cafe-nutri">QUERO AS RECEITAS!</a>
+  </div>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 8 – VEJA O QUE DIZ QUEM ADQUIRIU (WHATSAPP)
+     ========================================== -->
+<div class="bloco-whats">
+  <h2 class="titulo-whats">
+    <span class="whats-normal">VEJA O QUE DIZ</span><br>
+    <span class="whats-bold">QUEM ADQUIRIU:</span>
+  </h2>
+
+  <div class="carrossel-whats">
+    <div class="carrossel-inner">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/7-2.webp" alt="Depoimento 1">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/8-2.webp" alt="Depoimento 2">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/9-1.webp" alt="Depoimento 3">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/10.webp" alt="Depoimento 4">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/11.webp" alt="Depoimento 5">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/1-2.webp" alt="Depoimento 6">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/2-2.webp" alt="Depoimento 7">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/3-2.webp" alt="Depoimento 8">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/4-2.webp" alt="Depoimento 9">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/5-2.webp" alt="Depoimento 10">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/6-2.webp" alt="Depoimento 11">
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 9 – OFERTA / PREÇO
+     ========================================== -->
+<div class="secao-oferta-cafe">
+  <div class="faixa-bege">
+    <div class="card-produto">
+      <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/Design-sem-nome.png" alt="300 Receitas com Sabor" class="img-produto">
+      <h2 class="titulo-produto">200 CAFÉS DA MANHÃ DE NUTRI (COM SABOR)®</h2>
+      <p class="sub-produto">+ MARMITAS FIT<br>+ SOBREMESAS SEM AÇÚCAR<br>+ SUCOS DETOX</p>
+      <p class="preco-riscado">De R$129,00 ...</p>
+      <p class="preco-novo">por 3x de<br>R$7,17</p>
+      <p class="preco-avista">OU R$19,90 À VISTA</p>
+      <a href="https://lastlink.com/p/CC34C9B2D/checkout-payment/" class="botao-cafe-nutri">COMPRAR AGORA!</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 10 – GARANTIA
+     ========================================== -->
+<div style="max-width:430px; margin:0 auto;">
+  <div class="card-garantia">
+    <h3>Devolvemos seu Dinheiro<br>e você Fica com o Produto!</h3>
+    <p><strong>Essa é nossa garantia:</strong> teste por 7 dias e se não gostar, devolvemos seu dinheiro na hora e você ainda fica com o produto!</p>
+  </div>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 11 – COMO IREI RECEBER
+     ========================================== -->
+<div class="bloco-receber">
+  <h2 class="titulo-receber">
+    COMO IREI<br><span>RECEBER AS RECEITAS?</span>
+  </h2>
+
+  <img src="https://receitasdanutri.com.br/wp-content/uploads/2025/11/300-RECEITAS-COM-SABOR-1.png" alt="Dispositivos" class="img-dispositivos">
+
+  <ul class="lista-receber">
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Recebe no E-mail e Whatsapp
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Pode imprimir no papel
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Pode ver no celular
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Pode visualizar no computador
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Veja no tablet
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Novas receitas mensalmente
+    </li>
+    <li>
+      <span class="icon-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></span>
+      Perdeu a receita? Enviamos de novo
+    </li>
+  </ul>
+</div>
+
+<!-- ==========================================
+     SEÇÃO 12 – FAQ
+     ========================================== -->
+<div class="faq-section">
+  <div class="faq-title">
+    <h2>DÚVIDAS FREQUENTES</h2>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      As receitas têm mesmo sabor de verdade?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Sim! O maior foco da nutri Camila foi unir saúde com sabor de verdade. Nada de comida sem graça — são receitas realmente gostosas, testadas e aprovadas.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      São receitas saudáveis?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Todas são saudáveis, equilibradas e pensadas para oferecer os nutrientes e vitaminas que seu corpo precisa para começar bem o dia.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      As receitas servem para a família toda?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Com certeza! São ideias que agradam adultos e crianças, com ingredientes acessíveis e muito sabor.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      As receitas são fáceis de fazer?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Sim! A maioria das receitas é simples, com ingredientes acessíveis e instruções claras, perfeitas para o dia a dia corrido.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Preciso saber cozinhar para aproveitar?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Não! As receitas foram pensadas para todos os níveis de habilidade na cozinha — inclusive iniciantes.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Tem lista de ingredientes acessíveis?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Sim. A nutri priorizou ingredientes que você encontra com facilidade em mercados comuns, sem precisar de produtos caros ou raros.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Vou precisar de batedeira ou utensílios especiais?
+      <span class="arrow">⌃</span>
+    </button>
+    <div class="faq-answer">
+      Não! As receitas foram pensadas para o dia a dia, usando utensílios simples que você já tem em casa, como colher, garfo, liquidificador e frigideira.
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SCRIPTS
+     ========================================== -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ========================================
+       CARROSSEL HERO – imagens passando
+       ======================================== */
+    (function () {
+      var track = document.querySelector('.slides-cafe-nutri');
+      if (!track) return;
+      var total = track.children.length;
+      var idx = 0;
+
+      setInterval(function () {
+        idx = (idx + 1) % total;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      }, 2000);
+    })();
+
+    /* ========================================
+       CARROSSEL WHATSAPP – depoimentos passando
+       ======================================== */
+    (function () {
+      var track = document.querySelector('.carrossel-inner');
+      if (!track) return;
+      var total = track.children.length;
+      var idx = 0;
+
+      setInterval(function () {
+        idx = (idx + 1) % total;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      }, 3000);
+    })();
+
+    /* ========================================
+       FAQ ACCORDION
+       ======================================== */
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+      item.querySelector('.faq-question').addEventListener('click', function () {
+        item.classList.toggle('active');
+      });
+    });
+
+  });
+</script>
+
+<!-- Pixel UTMify -->
+<script>
+  window.pixelId = "694737a005d1bbc938ceb49c";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "receitadanutri-landing",
+  "version": "1.0.0",
+  "description": "Landing page - 300 Cafés da Manhã de Nutri",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  }
+}
